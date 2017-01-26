@@ -3,7 +3,9 @@
     <div class='row'>
       <div class="col-xs-12 col-sm-4 col-md-3" v-for='penalty in penalties'>
         <div class="panel panel-default">
-          <div class="panel-heading">{{ penalty.name }}</div>
+          <div class="panel-heading">
+            <h3 class="text-center">{{ penalty.name }}</h3>
+          </div>
           <div class="panel-body">
             <div class="image penalties" :class="penalty.cssClass"></div>
           </div>
@@ -119,5 +121,39 @@ export default {
 
   .slashing {
     background-position: -1050px -940px;
+  }
+
+  @media only screen and (min-width : 320px) {
+    h3 {
+      font-size: 20px
+    }
+  }
+
+  /* Extra Small Devices, Phones */
+  @media only screen and (min-width : 480px) {
+    h3 {
+      font-size: 24px
+    }
+  }
+
+  /* Small Devices, Tablets */
+  @media only screen and (min-width : 768px) {
+    h3 {
+      font-size: 20px
+    }
+  }
+
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width : 992px) {
+    h3 {
+      font-size: 16px
+    }
+  }
+
+  /* Large Devices, Wide Screens */
+  @media only screen and (min-width : 1200px) {
+    h3 {
+      font-size: 24px
+    }
   }
 </style>
