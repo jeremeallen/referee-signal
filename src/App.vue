@@ -2,12 +2,14 @@
   <div id="app" class='container-fluid'>
     <div class='row'>
       <div class="col-xs-12 col-sm-4 col-md-3" v-for='penalty in penalties'>
-        <div class="panel panel-default">
+        <div class="panel panel-default" @click="penalty.show = !penalty.show">
           <div class="panel-heading">
             <h3 class="text-center">{{ penalty.name }}</h3>
           </div>
           <div class="panel-body">
             <div class="image penalties" :class="penalty.cssClass"></div>
+
+            <small v-if="penalty.show">{{ penalty.definition }}</small>
           </div>
         </div>
       </div>
